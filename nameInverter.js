@@ -1,5 +1,6 @@
 const nameInverter = function(name) {
   var n = name;
+
   if (name === "") {
     return "";
   }
@@ -19,10 +20,11 @@ const nameInverter = function(name) {
     return n;
   }
 
+  if (name.includes(".") && fullname.length == 3) {
+    return fullname[0] + " " + fullname[2] + ", " + fullname[1];
+  }
+
   return n;
 };
-
-const person = "Dr. firt";
-nameInverter(person);
 
 module.exports = nameInverter;

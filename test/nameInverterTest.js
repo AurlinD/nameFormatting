@@ -45,4 +45,16 @@ describe("nameInverter", function() {
     const expectedOutput = "Dr. first";
     assert.equal(nameInverter(inputName), expectedOutput);
   });
+
+  it("return a honorific last-name, first-name when passed honorific first-name last-name", function() {
+    const inputName = "Dr. Aurlin Dhillon";
+    const expectedOutput = "Dr. Dhillon, Aurlin";
+    assert.equal(nameInverter(inputName), expectedOutput);
+  });
+
+  it("return a honorific last-name, first-name when passed honorific first-name last-name with extra spaces around the words", function() {
+    const inputName = " Dr. Aurlin Dhillon ";
+    const expectedOutput = "Dr. Dhillon, Aurlin";
+    assert.equal(nameInverter(inputName), expectedOutput);
+  });
 });
