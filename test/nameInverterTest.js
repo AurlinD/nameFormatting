@@ -33,4 +33,10 @@ describe("nameInverter", function() {
     const expectedOutput = "Dhillon, Aurlin";
     assert.equal(nameInverter(inputName), expectedOutput);
   });
+
+  it("return an empty string when passed a single honorific", function() {
+    const inputName = "Dr. ";
+    const expectedOutput = "";
+    assert.equal(nameInverter(inputName), expectedOutput);
+  });
 });
