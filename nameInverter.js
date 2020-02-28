@@ -8,17 +8,21 @@ const nameInverter = function(name) {
   }
   var fullname = n.split(" ");
 
-  if (fullname.length == 2) {
+  if (fullname.length == 2 && !n.includes(".")) {
     return fullname[1] + ", " + fullname[0];
   }
   if (name.includes(".") && fullname.length == 1) {
     return "";
   }
 
+  if (fullname.length == 2 && n.includes(".")) {
+    return n;
+  }
+
   return n;
 };
 
-const person = "Dr. ";
+const person = "Dr. firt";
 nameInverter(person);
 
 module.exports = nameInverter;
